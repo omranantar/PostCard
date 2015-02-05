@@ -9,7 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var lblResult: UILabel!
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtMessage: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +24,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func btnClicked(sender: AnyObject) {
+        lblResult.hidden = false
+        lblResult.text = "Mr. \(txtName.text) just wrote : \(txtMessage.text)"
+        txtMessage.text = ""
+        txtName.text = ""
+    }
 
 }
 
