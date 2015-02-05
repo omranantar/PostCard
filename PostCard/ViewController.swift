@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnClicked(sender: AnyObject) {
+        //When button add message is clicked.
         lblResult.hidden = false
         lblResult.text = "Mr. \(txtName.text) just wrote : \(txtMessage.text)"
         txtMessage.text = ""
